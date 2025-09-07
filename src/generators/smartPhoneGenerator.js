@@ -160,6 +160,26 @@ class SmartPhoneGenerator {
         national: nationalNumber,
         e164: `${selectedAreaCode}${nationalNumber}`
       };
+    } else if (countryData.country_code.startsWith('+1')) {
+      // Caribbean/NANP countries
+      const totalLength = countryData.phone_length;
+      const remainingLength = totalLength - selectedPrefix.length;
+      
+      if (remainingLength <= 0) {
+        console.warn(`Prefix ${selectedPrefix} too long for ${countryName}, using fallback`);
+        // Fallback: use first digit of prefix and generate rest
+        const firstDigit = selectedPrefix[0];
+        const suffix = this.generateRealisticSuffix(totalLength - 1, firstDigit, countryData);
+        nationalNumber = firstDigit + suffix;
+      } else {
+        const suffix = this.generateRealisticSuffix(remainingLength, selectedPrefix, countryData);
+        nationalNumber = selectedPrefix + suffix;
+      }
+      
+      return {
+        national: nationalNumber,
+        e164: `${countryData.country_code}${nationalNumber}`
+      };
     } else {
       // Standard mobile number generation
       const totalLength = countryData.phone_length;

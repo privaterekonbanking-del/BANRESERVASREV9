@@ -308,6 +308,241 @@ const enhancedPhoneData = {
     },
     "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
     "service_ranges": ["112", "113", "115", "117", "118"]
+  },
+
+  // Caribbean Countries (from your original data)
+  "Saint Lucia": {
+    "country_code": "+1758",
+    "iso2": "LC",
+    "phone_length": 7,
+    "mobile_patterns": ["^[2-4][0-9]{6}$"],
+    "carriers": {
+      "FLOW": {
+        "prefixes": ["2"],
+        "number_pattern": "Mobile numbers start with +1-758-2 followed by 6 digits",
+        "realistic_ranges": {
+          "2": { "start": "2000000", "end": "2999999" }
+        }
+      },
+      "Digicel": {
+        "prefixes": ["3", "4"],
+        "number_pattern": "Mobile numbers start with +1-758-3 or +1-758-4 followed by 6 digits",
+        "realistic_ranges": {
+          "3": { "start": "3000000", "end": "3999999" },
+          "4": { "start": "4000000", "end": "4999999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Saint Vincent and the Grenadines": {
+    "country_code": "+1784",
+    "iso2": "VC",
+    "phone_length": 7,
+    "mobile_patterns": ["^[3-5][0-9]{6}$"],
+    "carriers": {
+      "Green Dot": {
+        "prefixes": ["4"],
+        "number_pattern": "Mobile numbers start with +1-784-4 followed by 6 digits",
+        "realistic_ranges": {
+          "4": { "start": "4000000", "end": "4999999" }
+        }
+      },
+      "Flow": {
+        "prefixes": ["5"],
+        "number_pattern": "Mobile numbers start with +1-784-5 followed by 6 digits",
+        "realistic_ranges": {
+          "5": { "start": "5000000", "end": "5999999" }
+        }
+      },
+      "Digicel": {
+        "prefixes": ["3"],
+        "number_pattern": "Mobile numbers start with +1-784-3 followed by 6 digits",
+        "realistic_ranges": {
+          "3": { "start": "3000000", "end": "3999999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Dominica": {
+    "country_code": "+1767",
+    "iso2": "DM",
+    "phone_length": 7,
+    "mobile_patterns": ["^[2-4][0-9]{6}$"],
+    "carriers": {
+      "Digicel": {
+        "prefixes": ["2"],
+        "number_pattern": "Mobile numbers start with +1-767-2 followed by 6 digits",
+        "realistic_ranges": {
+          "2": { "start": "2000000", "end": "2999999" }
+        }
+      },
+      "Flow (LIME)": {
+        "prefixes": ["4"],
+        "number_pattern": "Mobile numbers start with +1-767-4 followed by 6 digits",
+        "realistic_ranges": {
+          "4": { "start": "4000000", "end": "4999999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Barbados": {
+    "country_code": "+1246",
+    "iso2": "BB",
+    "phone_length": 7,
+    "mobile_patterns": ["^24[2-6][0-9]{4}$"],
+    "carriers": {
+      "Flow": {
+        "prefixes": ["242", "243"],
+        "number_pattern": "Mobile numbers starting with 242 or 243",
+        "realistic_ranges": {
+          "242": { "start": "2420000", "end": "2429999" },
+          "243": { "start": "2430000", "end": "2439999" }
+        }
+      },
+      "Digicel": {
+        "prefixes": ["245", "246"],
+        "number_pattern": "Mobile numbers starting with 245 or 246",
+        "realistic_ranges": {
+          "245": { "start": "2450000", "end": "2459999" },
+          "246": { "start": "2460000", "end": "2469999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Aruba": {
+    "country_code": "+297",
+    "iso2": "AW",
+    "phone_length": 7,
+    "mobile_patterns": ["^[5-6][0-9]{6}$"],
+    "carriers": {
+      "Setar": {
+        "prefixes": ["5"],
+        "number_pattern": "Mobile numbers starting with 5 followed by 6 digits",
+        "realistic_ranges": {
+          "5": { "start": "5000000", "end": "5999999" }
+        }
+      },
+      "Digicel": {
+        "prefixes": ["6"],
+        "number_pattern": "Mobile numbers starting with 6 followed by 6 digits",
+        "realistic_ranges": {
+          "6": { "start": "6000000", "end": "6999999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "100"]
+  },
+
+  "Saint Kitts and Nevis": {
+    "country_code": "+1869",
+    "iso2": "KN",
+    "phone_length": 7,
+    "mobile_patterns": ["^[4-5][0-9]{6}$"],
+    "carriers": {
+      "Digicel": {
+        "prefixes": ["412", "413"],
+        "number_pattern": "Mobile numbers start with 412 or 413",
+        "realistic_ranges": {
+          "412": { "start": "4120000", "end": "4129999" },
+          "413": { "start": "4130000", "end": "4139999" }
+        }
+      },
+      "Flow": {
+        "prefixes": ["514", "515"],
+        "number_pattern": "Mobile numbers start with 514 or 515",
+        "realistic_ranges": {
+          "514": { "start": "5140000", "end": "5149999" },
+          "515": { "start": "5150000", "end": "5159999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Sint Maarten": {
+    "country_code": "+1721",
+    "iso2": "SX",
+    "phone_length": 7,
+    "mobile_patterns": ["^5[1-3][0-9]{5}$"],
+    "carriers": {
+      "Telcell": {
+        "prefixes": ["510", "511"],
+        "number_pattern": "Mobile numbers start with +1-721-510 or 511 followed by 4 digits",
+        "realistic_ranges": {
+          "510": { "start": "5100000", "end": "5109999" },
+          "511": { "start": "5110000", "end": "5119999" }
+        }
+      },
+      "Flow": {
+        "prefixes": ["520", "521"],
+        "number_pattern": "Mobile numbers start with +1-721-520 or 521 followed by 4 digits",
+        "realistic_ranges": {
+          "520": { "start": "5200000", "end": "5209999" },
+          "521": { "start": "5210000", "end": "5219999" }
+        }
+      },
+      "Digicel": {
+        "prefixes": ["530", "531"],
+        "number_pattern": "Mobile numbers start with +1-721-530 or 531 followed by 4 digits",
+        "realistic_ranges": {
+          "530": { "start": "5300000", "end": "5309999" },
+          "531": { "start": "5310000", "end": "5319999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "411", "611"]
+  },
+
+  "Trinidad and Tobago": {
+    "country_code": "+1868",
+    "iso2": "TT",
+    "phone_length": 7,
+    "mobile_patterns": ["^[2-7][0-9]{6}$"],
+    "carriers": {
+      "Digicel": {
+        "prefixes": ["299", "300", "301", "302", "303", "304", "305"],
+        "number_pattern": "Mobile numbers start with 299-305 followed by 4 digits",
+        "realistic_ranges": {
+          "299": { "start": "2990000", "end": "2999999" },
+          "300": { "start": "3000000", "end": "3009999" },
+          "301": { "start": "3010000", "end": "3019999" }
+        }
+      },
+      "bmobile": {
+        "prefixes": ["680", "681", "682", "683", "684", "685"],
+        "number_pattern": "Mobile numbers start with 680-685 followed by 4 digits",
+        "realistic_ranges": {
+          "680": { "start": "6800000", "end": "6809999" },
+          "681": { "start": "6810000", "end": "6819999" },
+          "682": { "start": "6820000", "end": "6829999" }
+        }
+      },
+      "LaqTel": {
+        "prefixes": ["720", "721", "722", "723"],
+        "number_pattern": "Mobile numbers start with 720-723 followed by 4 digits",
+        "realistic_ranges": {
+          "720": { "start": "7200000", "end": "7209999" },
+          "721": { "start": "7210000", "end": "7219999" }
+        }
+      }
+    },
+    "forbidden_patterns": ["0000", "1111", "2222", "3333", "4444", "5555", "6666", "7777", "8888", "9999"],
+    "service_ranges": ["911", "990", "999", "411"]
   }
 };
 

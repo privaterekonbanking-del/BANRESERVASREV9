@@ -1,24 +1,38 @@
 {
-  "name": "workspace",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "smart-phone-generator",
+  "version": "2.0.0",
+  "description": "Intelligent phone number generator with NumVerify API integration - Merged solution combining multiple AI approaches",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/main.js",
+    "test": "node test.js",
+    "demo": "node src/main.js"
+  },
+  "keywords": [
+    "phone-number",
+    "generator",
+    "validation",
+    "numverify",
+    "libphonenumber",
+    "caribbean",
+    "mobile-numbers",
+    "api-optimization"
+  ],
+  "author": "AI Collaboration (Original + Claude Opus + GPT-5)",
+  "license": "MIT",
+  "dependencies": {
+    "awesome-phonenumber": "^7.5.0",
+    "libphonenumber-js": "^1.12.15"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/privaterekonbanking-del/BANRESERVASREV9.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/privaterekonbanking-del/BANRESERVASREV9/issues"
   },
-  "homepage": "https://github.com/privaterekonbanking-del/BANRESERVASREV9#readme",
-  "dependencies": {
-    "awesome-phonenumber": "^7.5.0",
-    "libphonenumber-js": "^1.12.15"
-  }
+  "homepage": "https://github.com/privaterekonbanking-del/BANRESERVASREV9#readme"
 }
