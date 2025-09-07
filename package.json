@@ -1,0 +1,24 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/privaterekonbanking-del/BANRESERVASREV9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/privaterekonbanking-del/BANRESERVASREV9/issues"
+  },
+  "homepage": "https://github.com/privaterekonbanking-del/BANRESERVASREV9#readme",
+  "dependencies": {
+    "awesome-phonenumber": "^7.5.0",
+    "libphonenumber-js": "^1.12.15"
+  }
+}
