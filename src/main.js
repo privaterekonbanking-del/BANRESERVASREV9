@@ -11,9 +11,10 @@ class PhoneNumberSystem {
     this.generator = new SmartPhoneGenerator();
     
     this.config = {
-      defaultCount: 10,
+      defaultCount: 50000,        // UPDATED TO 50,000
+      maxBatchSize: 50000,        // MAXIMUM BATCH SIZE
       preValidationEnabled: true,
-      exportFormat: 'json',
+      exportFormat: 'txt',        // DEFAULT TO TXT FORMAT
       ...options
     };
   }
@@ -268,19 +269,36 @@ class PhoneNumberSystem {
   }
 
   /**
-   * Export results to text format
+   * Export results to text format - HORIZONTAL WITH COMMAS
    * @param {Array} results - Results to export
+   * @param {Object} options - Export options
    * @returns {Object} Text export object
    */
-  exportToText(results) {
+  exportToText(results, options = {}) {
+    const { numbersPerLine = null } = options;
     const validNumbers = results.filter(r => r.valid);
-    const text = validNumbers.map(r => r.e164).join('\n');
     
-    return {
-      format: 'txt',
-      count: validNumbers.length,
-      text
-    };
+    if (numbersPerLine && numbersPerLine > 0) {
+      // Format with line breaks every N numbers
+      let formattedText = '';
+      for (let i = 0; i < validNumbers.length; i += numbersPerLine) {
+        const line = validNumbers.slice(i, i + numbersPerLine).map(r => r.e164).join(',');
+        formattedText += line + '\n';
+      }
+      return {
+        format: 'txt',
+        count: validNumbers.length,
+        text: formattedText.trim()
+      };
+    } else {
+      // HORIZONTAL FORMAT WITH COMMAS (as requested)
+      const horizontalText = validNumbers.map(r => r.e164).join(',');
+      return {
+        format: 'txt',
+        count: validNumbers.length,
+        text: horizontalText  // +1868299123,+61412345678,+1649231456
+      };
+    }
   }
 
   /**
