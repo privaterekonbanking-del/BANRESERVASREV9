@@ -1,0 +1,61 @@
+// EXAMPLE OF HEAVY LOGIN PAGE THAT CAUSES MODULE BLOAT
+// DO NOT USE THIS - This demonstrates what causes the 637 module issue
+
+'use client' // Client component adds React runtime overhead
+
+// Heavy UI library imports - each imports entire component trees
+import { Box, Container, Paper, TextField, Button, Typography, Grid, Stack } from '@mui/material'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+
+// Heavy form library with all validators
+import { useForm, Controller } from 'react-hook-form'
+import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+// Heavy animation library
+import { motion } from 'framer-motion'
+
+// Heavy icon library importing all icons
+import * as Icons from '@mui/icons-material'
+
+// Heavy state management
+import { Provider } from 'react-redux'
+import { store } from '@/store/store'
+
+// Heavy utility libraries
+import _ from 'lodash'
+import moment from 'moment'
+
+// Custom heavy components that import more dependencies
+import PageContainer from '@/components/PageContainer' // This likely imports more heavy deps
+import AuthLayout from '@/components/AuthLayout'
+import LoadingSpinner from '@/components/LoadingSpinner'
+
+const theme = createTheme()
+
+const schema = yup.object({
+  email: yup.string().email().required(),
+  password: yup.string().min(8).required(),
+})
+
+export default function HeavyLoginPage() {
+  const { control, handleSubmit } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  return (
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <PageContainer>
+          <AuthLayout>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              {/* Rest of heavy component tree */}
+            </motion.div>
+          </AuthLayout>
+        </PageContainer>
+      </ThemeProvider>
+    </Provider>
+  )
+}
